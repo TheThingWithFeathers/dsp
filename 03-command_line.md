@@ -9,33 +9,33 @@ Please follow and complete the free online [Bash Scripting Tutorial](https://rya
 ### Q1.  Cheat Sheet of Commands  
 
 Here's a list of items with which you should be familiar:  
-* show current working directory path
-* creating a directory
-* deleting a directory
-* creating a file using `touch` command
-* deleting a file
-* renaming a file
-* listing hidden files
-* copying a file from one directory to another
+* show current working directory path >>  pwd
+* creating a directory >> mkdir
+* deleting a directory >> rmdir if empty, else rm -r
+* creating a file using `touch` command >> touch
+* deleting a file >> rm
+* renaming a file >> mv original_name new_name
+* listing hidden files >> ls -a
+* copying a file from one directory to another >> cp
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do.  (Use the 8 items above and add a couple of your own.)  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+look up command info >> man
+update file permissions (must do to execute) >> chmod
 
 ---
 
 ### Q2.  List Files in Unix   
 
 What do the following commands do:  
-`ls`  
-`ls -a`  
-`ls -l`  
-`ls -lh`  
-`ls -lah`  
-`ls -t`  
-`ls -Glp`  
+`ls`  >> lists the contents of the directory
+`ls -a`  >> lists contents, including hidden files
+`ls -l`  >> long format view, includes details like file permissions
+`ls -lh` >> long format view + uses appropriate size unit suffixes (e.g. Gb)
+`ls -lah` >> long format view + show hidden files + unit suffixes
+`ls -t`  >> sort by time modified
+`ls -Glp`  >> enable colorized output + long format + show with a / when a file is a directory
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
 
 ---
 
@@ -43,7 +43,11 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+-R displays subdirectories
+-d displays only directories
+-F flags whether a file is a directory, executable file, symbolic link, socket, whiteout, FIFO
+-S sorts files by size
+-H follows symbolic links
 
 ---
 
@@ -51,7 +55,12 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+Allows the user to build and execute command lines from standard input. For example: 
+Natalias-MacBook-Pro:xargs_test natalia$ xargs touch
+test1 test2 test3
+Natalias-MacBook-Pro:xargs_test natalia$ ls
+test1	test2	test3
+
 
  
 
